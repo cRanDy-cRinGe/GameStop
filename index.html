@@ -4565,7 +4565,7 @@
             height: 90vh;
             left: -6vw;
         }
-        @media (max-width: 1400px) {
+        @media (max-width: 1850px) {
             .screen-frame {
                 height: 70vh;
 
@@ -4577,15 +4577,41 @@
                 height: 70vh;
             }
         }
-        @media (max-width: 1200px) {
+        @media (max-width: 1550px) {
             .screen-frame {
-                height: 70vh;
+                height: 74vh;
 
             }
             .screen-display {
-                height: 66vh;
+                height: 70vh;
+            }
+            .img-chill {
+                height: 70vh;
             }
         }
+        @media (max-width: 1400px) {
+            .screen-frame {
+                height: 80vh;
+
+            }
+            .screen-display {
+                height: 76vh;
+            }
+            .img-chill {
+                height: 70vh;
+            }
+        }
+        @media (max-width: 1200px) {
+            .screen-frame {
+                height: 78vh;
+
+            }
+
+            .screen-display {
+                height: 74vh;
+            }
+        }
+
         @media (max-width: 1000px) {
             .screen-frame {
                 height: 60vh;
@@ -4723,7 +4749,15 @@
             max-height: 80vh;
         }
         .text-uzi {
-            text-shadow: 0.03em -0.02em 0px rgba(99, 99, 99, 0.2);
+            text-shadow: 0.02em -0.01em 0px rgba(99, 99, 99, 0.2);
+        }
+        #bold10 {
+            font-weight: 1200;
+            text-shadow:
+                    1px 1px 0 black,
+                    -1px 1px 0 black,
+                    1px -1px 0 black,
+                    -1px -1px 0 black;
         }
     </style>
 
@@ -4864,40 +4898,40 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="buy__slide swiper-slide">
-                                <div class="swiper-slide__card card-buy">
-                                    <h3 class="card-buy__title">Add Base Chain to Wallet</h3>
-                                    <div class="card-buy__text">
-                                        <p>
-                                            Follow the guide below to add the Base chain to your
-                                            new
-                                            <a href="https://www.coingecko.com/learn/add-coinbase-base-to-metamask"
-                                               class="card-buy__link" target="_blank">Metamask Wallet.</a>
-                                        </p>
-                                    </div>
-                                    <button class="uiverse" onclick="window.location.href='https://www.coingecko.com/learn/add-coinbase-base-to-metamask'">
-                                        <div class="wrapper-b">
-                                            <span class="font-border">Chain to Wallet</span>
-                                            <div class="circle circle-12"></div>
-                                            <div class="circle circle-11"></div>
-                                            <div class="circle circle-10"></div>
-                                            <div class="circle circle-9"></div>
-                                            <div class="circle circle-8"></div>
-                                            <div class="circle circle-7"></div>
-                                            <div class="circle circle-6"></div>
-                                            <div class="circle circle-5"></div>
-                                            <div class="circle circle-4"></div>
-                                            <div class="circle circle-3"></div>
-                                            <div class="circle circle-2"></div>
-                                            <div class="circle circle-1"></div>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
+<!--                            <div class="buy__slide swiper-slide">-->
+<!--                                <div class="swiper-slide__card card-buy">-->
+<!--                                    <h3 class="card-buy__title">Add Base Chain to Wallet</h3>-->
+<!--                                    <div class="card-buy__text">-->
+<!--                                        <p>-->
+<!--                                            Follow the guide below to add the Base chain to your-->
+<!--                                            new-->
+<!--                                            <a href="https://www.coingecko.com/learn/add-coinbase-base-to-metamask"-->
+<!--                                               class="card-buy__link" target="_blank">Metamask Wallet.</a>-->
+<!--                                        </p>-->
+<!--                                    </div>-->
+<!--                                    <button class="uiverse" onclick="window.location.href='https://www.coingecko.com/learn/add-coinbase-base-to-metamask'">-->
+<!--                                        <div class="wrapper-b">-->
+<!--                                            <span class="font-border">Chain to Wallet</span>-->
+<!--                                            <div class="circle circle-12"></div>-->
+<!--                                            <div class="circle circle-11"></div>-->
+<!--                                            <div class="circle circle-10"></div>-->
+<!--                                            <div class="circle circle-9"></div>-->
+<!--                                            <div class="circle circle-8"></div>-->
+<!--                                            <div class="circle circle-7"></div>-->
+<!--                                            <div class="circle circle-6"></div>-->
+<!--                                            <div class="circle circle-5"></div>-->
+<!--                                            <div class="circle circle-4"></div>-->
+<!--                                            <div class="circle circle-3"></div>-->
+<!--                                            <div class="circle circle-2"></div>-->
+<!--                                            <div class="circle circle-1"></div>-->
+<!--                                        </div>-->
+<!--                                    </button>-->
+<!--                                </div>-->
+<!--                            </div>-->
                             <div class="buy__slide swiper-slide">
                                 <div class="swiper-slide__card card-buy">
                                     <h3 class="card-buy__title">
-                                        Send ETH to Wallet and Bridge
+                                        Send ETH to Wallet
                                     </h3>
                                     <div class="card-buy__text">
                                         <p>
@@ -5027,7 +5061,7 @@
                             <animate attributeName="x1" href="#linear-gradient" values="0%;300%;" dur="3s"
                                      repeatCount="indefinite"/>
                         </svg>
-                        <img data-src="static/chillbuck1.png" class="img-chill" alt="Image"/>
+                        <img data-src="/static/chillbuck1.png" class="img-chill" alt="Image"/>
                     </div>
                     <div class="tokenomics__box">
                         <div class="tokenomics__card ultrasound-screen">
@@ -5053,7 +5087,7 @@
                                         <li class="card-tokenomics__item">
                                             <span><img src="static/bank-stroke-rounded.svg"
                                                        alt="Image"/></span>
-                                            <p class="text-uzi">10B Supply</p>
+                                            <p><span id="bold10">10</span> <span class="text-uzi">B Supply</span></p>
                                         </li>
                                     </ul>
                                     <div class="back_video">
