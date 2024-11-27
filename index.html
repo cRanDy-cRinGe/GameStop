@@ -876,12 +876,16 @@
         }
 
         .hero__cat-img {
+            position: relative;
+            left: -10vw;
             width: 90%;
             aspect-ratio: 617/636
+
         }
         @media (max-width: 768px) {
             .hero__cat-img {
-                width: 90%;
+                width: 50%;
+                height: auto;
             }
             .hero__img {
                 right: 0;
@@ -954,12 +958,53 @@
             display: flex;
             max-width: 96.25rem
         }
-
+        .nowrap {
+            white-space: nowrap;
+        }
         .buy__wrapper-buttle {
             flex: 0 1 32.913907%;
-            padding-top: 2.125rem
+            padding-top: 2.125rem;
+            position: relative;
+            bottom: 4vh;
+            margin-left: 2.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Crog, sans-serif;
+            font-weight: 800;
+        }
+        @media (max-width: 1000px){
+            .buy__wrapper-buttle {
+                bottom: 0vh;
+                margin-left: 3em;
+            }
+        }
+        @media (max-width: 840px){
+            .buy__wrapper-buttle {
+                bottom: -1vh;
+                left: 2vw;
+            }
+        }
+        @media (max-width: 650px){
+            .buy__wrapper-buttle {
+                margin-bottom: 0em;
+                left: 2vw;
+            }
+        }
+        @media (max-width: 575px){
+            .buy__wrapper-buttle {
+                bottom: -1em;
+                left: -1vh;
+            }
         }
 
+        @media (max-width: 480px){
+            .buy__wrapper-buttle {
+                bottom: 0em;
+                left: -1vh;
+                font-size: 1.25rem;
+            }
+        }
         .buy__swiper-box {
             flex: 0 1 67.086093%;
             display: flex;
@@ -1017,11 +1062,12 @@
         }
 
         .buttle-buy {
-            position: relative;
+            position: absolute;
             display: flex;
             justify-content: center;
             align-items: center;
-            aspect-ratio: 455/283
+            aspect-ratio: 455/283;
+
         }
 
         @-webkit-keyframes buttleAn {
@@ -1054,28 +1100,15 @@
             }
         }
 
-        .buttle-buy__decor {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0
-        }
 
-        .buttle-buy__decor img {
-            width: 100%;
-            height: 100%;
-            -o-object-fit: contain;
-            object-fit: contain
-        }
 
-        .buttle-buy__title {
-            position: relative;
-            z-index: 1;
-            top: -10vh;
-            font-family: Crog, sans-serif;
-            font-weight: 800
-        }
+        /*.buttle-buy__title {*/
+        /*    position: relative;*/
+        /*    z-index: 1;*/
+        /*    top: -10vh;*/
+        /*    font-family: Crog, sans-serif;*/
+        /*    font-weight: 800*/
+        /*}*/
 
         .buttle-buy__top-title {
             color: var(--text-inverse);
@@ -1094,7 +1127,8 @@
         .card-buy {
             display: grid;
             color: var(--text-inverse);
-            padding-bottom: 1.875rem
+            padding-bottom: 1.875rem;
+
         }
 
         .card-buy__title {
@@ -2129,8 +2163,8 @@
             }
 
             ._watcher-view .swiper-button-next, ._watcher-view .swiper-button-prev {
-                -webkit-animation: buttonPrev .0s ease .0s forwards;
-                animation: buttonPrev .0s ease .0s forwards
+                -webkit-animation: buttonPrev .8s ease .6s forwards;
+                animation: buttonPrev .8s ease .6s forwards
             }
 
             .swiper-button-next {
@@ -2141,8 +2175,8 @@
             }
 
             ._watcher-view .swiper-button-next {
-                -webkit-animation: buttonNext .0s ease .0s forwards;
-                animation: buttonNext .0s ease .0s forwards
+                -webkit-animation: buttonNext .8s ease .6s forwards;
+                animation: buttonNext .8s ease .6s forwards
             }
         }
 
@@ -2267,7 +2301,7 @@
         }
 
         @media (max-width: 75em) {
-            .button-orange {
+            .uiverse {
                 margin-left: auto;
                 margin-right: auto
             }
@@ -2295,9 +2329,8 @@
             }
 
             .buttle-buy {
-                -webkit-transform: rotate(10deg);
-                transform: rotate(10deg);
-                min-width: 16.25rem
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
             }
 
             .swiper-button-next img, .swiper-button-prev img {
@@ -2735,13 +2768,13 @@
 
         @media (max-width: 124.99875em) {
             .swiper-button-next, .swiper-button-prev {
-                -webkit-transform: translate(0, 0) rotate(-5.546deg);
-                transform: translate(0, 0) rotate(-5.546deg)
+                -webkit-transform: translate(0, 0) rotate(0deg);
+                transform: translate(0, 0) rotate(0deg)
             }
 
             .swiper-button-next {
-                -webkit-transform: translate(0, 0) rotate(5.546deg);
-                transform: translate(0, 0) rotate(5.546deg)
+                -webkit-transform: translate(0, 0) rotate(0deg);
+                transform: translate(0, 0) rotate(0deg)
             }
         }
 
@@ -2962,9 +2995,9 @@
         }
 
         @media (max-width: 29.99875em) {
-            .buy__wrapper-buttle {
-                width: 85%
-            }
+            /*.buy__wrapper-buttle {*/
+            /*    width: 85%*/
+            /*}*/
 
             .tokenomics__box {
                 width: 100%
@@ -3518,11 +3551,11 @@
             }
         }@supports (padding-left:clamp(2.5rem ,-1.5789473684rem + 6.5789473684vw ,5rem)) {
             .buttle-buy {
-                padding-left: clamp(2.5rem, -1.5789473684rem + 6.5789473684vw, 5rem)
+                padding-left: clamp(1rem, -1.5789473684rem + 6.5789473684vw, 1rem)
             }
         }@supports not (padding-left:clamp(2.5rem ,-1.5789473684rem + 6.5789473684vw ,5rem)) {
             .buttle-buy {
-                padding-left: calc(2.5rem + 2.5 * (100vw - 62rem) / 38)
+                padding-left: calc(1rem + 2.5 * (100vw - 62rem) / 1)
             }
         }@supports (padding:clamp(0.875rem ,-0.0427631579rem + 1.4802631579vw ,1.4375rem)) {
             .right-about__item {
@@ -4090,23 +4123,23 @@
         .uiverse {
             --duration: 7s;
             --easing: linear;
-            --c-color-1: rgba(217, 26, 255, .7);
+            --c-color-1: rgba(26, 167, 255, 0.7);
             /* Changed color */
-            --c-color-2: #fa66ae;
+            --c-color-2: #6672fa;
             /* Changed color */
-            --c-color-3: #ff1a75;
+            --c-color-3: #0067ff;
             /* Changed color */
-            --c-color-4: rgba(245, 193, 81, .7);
+            --c-color-4: rgb(0, 255, 225);
             /* Changed color */
             --c-shadow: rgba(245, 193, 81, 0);
             /* Changed color */
-            --c-shadow-inset-top: rgba(142, 77, 196, .9);
+            --c-shadow-inset-top: rgba(77, 192, 196, 0.9);
             /* Changed color */
             --c-shadow-inset-bottom: rgba(215, 250, 255, .8);
             /* Changed color */
             --c-radial-inner: #15d2ff;
             /* Changed color */
-            --c-radial-outer: #f80dfc;
+            --c-radial-outer: rgba(0, 234, 255, 0.7);
             /* Changed color */
             --c-color: #fff;
             -webkit-tap-highlight-color: transparent;
@@ -4122,20 +4155,53 @@
             max-width: 32vw;
             text-align: center;
             font-weight: 900;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             letter-spacing: 0.02em;
             color: var(--c-color);
             background: radial-gradient(circle, var(--c-radial-inner), var(--c-radial-outer) 80%);
             box-shadow: 0 0 14px var(--c-shadow);
             font-family: Crog, sans-serif;
-            text-shadow: 0em 0em 14px rgba(255, 255, 255, 0.6)
+            text-shadow: 0em 0em 14px rgba(255, 255, 255, 0.6);
+            left: 0vw;
+        }
+
+        @media (max-width: 1200px) {
+            .uiverse {
+                left: 8vw;
+            }
+
+        }
+        @media (max-width: 1000px) {
+            .uiverse {
+                left: 15vw;
+            }
+
+        }
+        @media (max-width: 840px) {
+            .uiverse {
+                left: 20vw;
+            }
+
         }
         @media (max-width: 768px) {
             .uiverse {
                 max-width: 40vw;
                 border-radius: 2em;
+                left: 15vw;
             }
 
+        }
+        @media (max-width: 575px) {
+            .uiverse {
+                left: 28vw;
+                font-size: 0.8rem;
+            }
+        }
+        @media (max-width: 400px) {
+            .uiverse {
+                left: 28vw;
+                font-size: 0.6rem;
+            }
         }
 
         .uiverse:before {
@@ -4422,6 +4488,46 @@
                 top: 0vh;
             }
         }
+        .video-player {
+            background: #ffffff;
+            width:  110%;
+            border-radius: 1.6em;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            left: -11vw;
+            bottom: -8vh;
+        }
+
+        .play-button {
+            width: 50px;
+            height: 50px;
+            background-color: #000000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .arrow {
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 15px solid white;
+            position: relative;
+            left: 2px;
+        }
+
+        .watch-text {
+            font-size: 2rem;
+            color: #000000;
+            font-weight: 900;
+        }
         .ultrasound-screen {
             display: flex;
             flex-direction: column;
@@ -4430,7 +4536,7 @@
 
         .screen-frame {
             width: 50vw;
-            height: 80vh;
+            height: 100vh;
             background-color: #444;
             border: 6px solid #666;
             border-radius: 8px;
@@ -4441,8 +4547,9 @@
         }
 
         .screen-display {
+            padding-top: 6vh;
             width: 48vw;
-            height: 76vh;
+            height: 96vh;
             background-color: #d3d3d3;
             border-radius: 4px;
             position: relative;
@@ -4450,10 +4557,150 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: start;
             box-shadow: inset 0 0 14px rgb(43, 43, 43);
         }
+        .img-chill {
+            position: relative;
+            height: 90vh;
+            left: -6vw;
+        }
+        @media (max-width: 1400px) {
+            .screen-frame {
+                height: 70vh;
 
+            }
+            .screen-display {
+                height: 66vh;
+            }
+            .img-chill {
+                height: 70vh;
+            }
+        }
+        @media (max-width: 1200px) {
+            .screen-frame {
+                height: 70vh;
+
+            }
+            .screen-display {
+                height: 66vh;
+            }
+        }
+        @media (max-width: 1000px) {
+            .screen-frame {
+                height: 60vh;
+
+            }
+            .screen-display {
+                height: 56vh;
+                width: 46vw;
+            }
+            .video-player {
+                left: -8vw;
+                bottom: -6vh;
+            }
+            .img-chill {
+                height: 54vh;
+                left: -2vw;
+            }
+        }
+        @media (max-width: 821px) {
+            .screen-frame {
+                height: 56vh;
+                width: 58vw;
+
+            }
+            .screen-display {
+                height: 52vh;
+                width: 54vw;
+            }
+            .video-player {
+                left: -10vw;
+                bottom: -4vh;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .screen-frame {
+                width: 80vw;
+                height: 60vh;
+                
+            }
+            .screen-display {
+                width: 76vw;
+                height: 56vh;
+            }
+            .video-player {
+                left: -13vw;
+                bottom: -4vh;
+            }
+            .img-tweet {
+                left: -4vw;
+            }
+            .img-chill {
+                height: 68vh;
+            }
+        }
+        @media (max-width: 600px) {
+            .screen-frame {
+                width: 80vw;
+                height: 54vh;
+
+            }
+
+            .screen-display {
+                width: 76vw;
+                height: 50vh;
+            }
+
+            .video-player {
+                left: -11vw;
+                bottom: -4vh;
+            }
+            .img-tweet {
+                left: -8vw;
+            }
+        }
+        @media (max-width: 431px) {
+            .img-tweet {
+                left: -6vw;
+            }
+            .screen-frame {
+                width: 80vw;
+                height: 44vh;
+
+            }
+
+            .screen-display {
+                width: 76vw;
+                height: 42vh;
+            }
+
+            .video-player {
+                left: -4vw;
+                bottom: -4vh;
+            }
+            .img-chill {
+                left: 2vw;
+            }
+        }
+        @media (max-width: 380px) {
+            .screen-frame {
+                width: 80vw;
+                height: 52vh;
+
+            }
+
+            .screen-display {
+                width: 76vw;
+                height: 48vh;
+            }
+
+            .video-player {
+                left: -4vw;
+                bottom: -4vh;
+            }
+        }
         .screen-stand {
             width: 20vw;
             height: 4vh;
@@ -4461,10 +4708,26 @@
             margin-top: 10px;
             border-radius: 4px;
         }
+        .font-border {
+            text-shadow:
+                    1px 1px 0 black,
+                    -1px 1px 0 black,
+                    1px -1px 0 black,
+                    -1px -1px 0 black;
+        }
 
+
+        .img-tweet {
+            position: relative;
+            max-width: 60vw;
+            max-height: 80vh;
+        }
+        .text-uzi {
+            text-shadow: 0.03em -0.02em 0px rgba(99, 99, 99, 0.2);
+        }
     </style>
 
-    <link rel="shortcut icon" href="./img/logo.svg"/>
+    <link rel="shortcut icon" href="static/logo transparent.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
@@ -4474,7 +4737,7 @@
     <header class="header">
         <div class="header__container">
             <div class="header__left">
-                <a href="" class="header__logo"><img src="/static/logo transparent.png" alt="logotype"/></a>
+                <a href="" class="header__logo"><img src="static/logo transparent.png" alt="logotype"/></a>
                 <div class="community">
                     <span class="header_consumption">Community</span>
                     <span class="header_consumption_mascot">Mascot Edition</span>
@@ -4513,7 +4776,7 @@
                                class="social-header__link">
                                 <img src="https://gamestop-coin.vip/img/header/social/x.svg" alt="Image"/>
                             </a>
-                            <a href="https://t.me/GME_ERC20" target="_blank" aria-label="social telegram"
+                            <a href="https://t.me/GMEMASCOTPORTAL" target="_blank" aria-label="social telegram"
                                class="social-header__link">
                                 <img src="https://gamestop-coin.vip/img/header/social/bxl_telegram.svg" alt="Image"/>
                             </a>
@@ -4526,7 +4789,7 @@
                 </div>
             </div>
             <a data-da=".menu__body, 991.98"
-               href="https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0xc56C7A0eAA804f854B536A5F3D5f49D2EC4B12b8&chain=mainnet"
+               href="https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=0x5de5aca787818a2d485e278727ce575d54fedbe4"
                target="_blank" class="header__button button">
                 Buy Now
             </a>
@@ -4553,15 +4816,15 @@
         <section data-watch="navigator" class="page__buy buy">
             <div data-watch data-watch-threshold="0.7" data-watch-once class="buy__container">
                 <div class="buy__wrapper-buttle">
-                    <div class="buy__buttle buttle-buy">
-                        <div class="buttle-buy__decor">
+<!--                    <div class="buy__buttle buttle-buy">-->
+<!--                        <div class="buttle-buy__decor">-->
 <!--                            <img src="/static/Trash_bin.png" alt="Image"/>-->
-                        </div>
+<!--                        </div>-->
                         <h2 class="buttle-buy__title">
-                            <span class="buttle-buy__top-title">How to</span>
-                            <span class="buttle-buy__bottom-title red">buy</span>
+                            <span class="buttle-buy__top-title nowrap">HOW TO</span>
+                            <span class="buttle-buy__bottom-title red">BUY</span>
                         </h2>
-                    </div>
+<!--                    </div>-->
                 </div>
                 <div class="buy__swiper-box">
                     <button type="button" class="swiper-button-prev">
@@ -4584,7 +4847,7 @@
                                     </div>
                                     <button class="uiverse" onclick="window.location.href='https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn'">
                                         <div class="wrapper-b">
-                                            <span>Download Metamask</span>
+                                            <span class="font-border">Download Metamask</span>
                                             <div class="circle circle-12"></div>
                                             <div class="circle circle-11"></div>
                                             <div class="circle circle-10"></div>
@@ -4614,7 +4877,7 @@
                                     </div>
                                     <button class="uiverse" onclick="window.location.href='https://www.coingecko.com/learn/add-coinbase-base-to-metamask'">
                                         <div class="wrapper-b">
-                                            <span>Chain to Wallet</span>
+                                            <span class="font-border">Chain to Wallet</span>
                                             <div class="circle circle-12"></div>
                                             <div class="circle circle-11"></div>
                                             <div class="circle circle-10"></div>
@@ -4645,7 +4908,7 @@
                                     </div>
                                     <button class="uiverse" onclick="window.location.href='https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0xc56C7A0eAA804f854B536A5F3D5f49D2EC4B12b8&chain=mainnet'">
                                         <div class="wrapper-b">
-                                            <span>Send $ETH to Wallet</span>
+                                            <span class="font-border">Send $ETH to Wallet</span>
                                             <div class="circle circle-12"></div>
                                             <div class="circle circle-11"></div>
                                             <div class="circle circle-10"></div>
@@ -4669,15 +4932,15 @@
                                         <p>
                                             Use the link below to connect your wallet to Uniswap
                                             and
-                                            <a href="https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0xc56C7A0eAA804f854B536A5F3D5f49D2EC4B12b8&chain=mainnet"
+                                            <a href="https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=0x5de5aca787818a2d485e278727ce575d54fedbe4"
                                                target="_blank" class="card-buy__link">
                                                 exchange</a>
                                             ETH for $BUCK
                                         </p>
                                     </div>
-                                    <button class="uiverse" onclick="window.location.href='https://app.uniswap.org/swap?inputCurrency=eth&outputCurrency=0xc56C7A0eAA804f854B536A5F3D5f49D2EC4B12b8&chain=mainnet'">
+                                    <button class="uiverse" onclick="window.location.href='https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=0x5de5aca787818a2d485e278727ce575d54fedbe4'">
                                         <div class="wrapper-b">
-                                            <span>Purhcase</span>
+                                            <span class="font-border">Purhcase</span>
                                             <div class="circle circle-12"></div>
                                             <div class="circle circle-11"></div>
                                             <div class="circle circle-10"></div>
@@ -4709,12 +4972,7 @@
                     <article class="about__left left-about">
                         <h2 class="left-about__title"><span class="bold">About</span></h2>
                         <div class="left-about__img">
-                            <blockquote class="twitter-tweet"><p lang="zxx" dir="ltr"><a href="https://t.co/YgjVqtgcNS">pic.twitter.com/YgjVqtgcNS</a>
-                            </p>&mdash; Roaring Kitty (@TheRoaringKitty) <a
-                                    href="https://twitter.com/TheRoaringKitty/status/1789807772542067105?ref_src=twsrc%5Etfw">May
-                                13, 2024</a></blockquote>
-                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                            <span> </span>
+                            <img class="img-tweet" src="static/website-image1.png">
                         </div>
                     </article>
                     <article class="about__right right-about">
@@ -4722,30 +4980,6 @@
                         <h4 class="right-about__subtitle">
                             <span class="bold">tell me more about Buck</span>
                         </h4>
-<!--                        <ul class="right-about__list">-->
-<!--                            <li class="right-about__item">-->
-<!--                                <div class="right-about__count">-->
-<!--                                    <span data-counter=" 1s , 4em">19</span><span>86</span>-->
-<!--                                </div>-->
-<!--                                <div class="right-about__text">Years in born</div>-->
-<!--                            </li>-->
-<!--                            <li class="right-about__item">-->
-<!--                                <div data-counter=" 1s" class="right-about__count">50</div>-->
-<!--                                <div class="right-about__text">Million</div>-->
-<!--                            </li>-->
-<!--                            <li class="right-about__item">-->
-<!--                                <div class="right-about__count">-->
-<!--                                    <span data-counter=" 1s , 8em">53</span><span>000</span>-->
-<!--                                </div>-->
-<!--                                <div class="right-about__text">IN START</div>-->
-<!--                            </li>-->
-<!--                            <li class="right-about__item">-->
-<!--                                <div data-counter=" 1s" class="right-about__count">15</div>-->
-<!--                                <div class="right-about__text">-->
-<!--                                    Million in one day-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                        </ul>-->
                         <div class="right-about__blok-text">
                             <p>
                                 <span class="bold">Buck is Back! Introducing $Buck – The Next Big Crypto Mascot!</span> -
@@ -4793,7 +5027,7 @@
                             <animate attributeName="x1" href="#linear-gradient" values="0%;300%;" dur="3s"
                                      repeatCount="indefinite"/>
                         </svg>
-                        <img data-src="static/logo transparent.png" alt="Image"/>
+                        <img data-src="static/chillbuck1.png" class="img-chill" alt="Image"/>
                     </div>
                     <div class="tokenomics__box">
                         <div class="tokenomics__card ultrasound-screen">
@@ -4804,24 +5038,33 @@
                                         <li class="card-tokenomics__item">
                                             <span><img src="static/bitcoin-shopping-stroke-rounded.svg"
                                                        alt="Image"/></span>
-                                            0% Taxes
+                                            <p class="text-uzi">0% Taxes</p>
                                         </li>
                                         <li class="card-tokenomics__item">
-                                            <span><img src="static/bitcoin-shopping-stroke-rounded.svg"
+                                            <span><img src="static/bitcoin-lock-stroke-rounded.svg"
                                                        alt="Image"/></span>
-                                            LP Locked
+                                            <p class="text-uzi">LP Burned</p>
                                         </li>
                                         <li class="card-tokenomics__item">
                                             <span><img src="static/checkmark-badge-02-stroke-rounded.svg"
                                                        alt="Image"/></span>
-                                            Ownership renounced
+                                            <p class="text-uzi">Ownership renounced</p>
                                         </li>
                                         <li class="card-tokenomics__item">
                                             <span><img src="static/bank-stroke-rounded.svg"
                                                        alt="Image"/></span>
-                                            10B Supply
+                                            <p class="text-uzi">10B Supply</p>
                                         </li>
                                     </ul>
+                                    <div class="back_video">
+                                        <div class="video-player">
+                                            <div class="play-button" onclick="openVideo()">
+                                                <div class="arrow"></div>
+                                            </div>
+                                            <span class="watch-text">Watch Video</span>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="screen-stand"></div>
@@ -4850,7 +5093,7 @@
                             </a>
                         </div>
                         <div class="top-footer__column">
-                            <a href="https://t.me/GME_ERC20" target="_blank" class="top-footer__link"> Telegram </a>
+                            <a href="https://t.me/GMEMASCOTPORTAL" target="_blank" class="top-footer__link"> Telegram </a>
                             <a href="https://x.com/gme_buck" target="_blank" class="top-footer__link">
                                 Twitter [<span class="red">x</span>]
                             </a>
@@ -4870,7 +5113,7 @@
 <!--                    </div>-->
                 </div>
                 <div class="footer__img">
-                    <img data-src="static/logo transparent.png" alt="Image"/>
+                    <img data-src="static/kg1.png" alt="Image"/>
                 </div>
             </div>
         </div>
@@ -4880,6 +5123,11 @@
 <script data-cfasync="false"
         src="https://gamestop-coin.vip/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script src="https://gamestop-coin.vip/js/app.min.js?_v=20240507225032"></script>
+<script>
+    function openVideo() {
+        window.open("https://www.youtube.com/watch?v=Xq9gucD7t-k", "_blank");
+    }
+</script>
 </body>
 
 </html>
