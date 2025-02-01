@@ -347,7 +347,7 @@ img, video {
 }
 
 body {
-    background-image: url("/static/stars-stripes-3_1stars-stripes-3.webp");
+    background-image: url("static/stars-stripes-3_1stars-stripes-3.webp");
     color: hsl(var(--foreground))
 }
 
